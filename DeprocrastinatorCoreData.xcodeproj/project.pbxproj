@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C445F00F1BA3B12E00C012EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C445F00E1BA3B12E00C012EF /* main.m */; };
+		C445F0121BA3B12E00C012EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C445F0111BA3B12E00C012EF /* AppDelegate.m */; };
+		C445F0151BA3B12E00C012EF /* DeprocrastinatorCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C445F0131BA3B12E00C012EF /* DeprocrastinatorCoreData.xcdatamodeld */; };
+		C445F0181BA3B12E00C012EF /* ToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C445F0171BA3B12E00C012EF /* ToDoViewController.m */; };
+		C445F01B1BA3B12E00C012EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C445F0191BA3B12E00C012EF /* Main.storyboard */; };
+		C445F01D1BA3B12E00C012EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C445F01C1BA3B12E00C012EF /* Images.xcassets */; };
+		C445F0201BA3B12E00C012EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C445F01E1BA3B12E00C012EF /* LaunchScreen.xib */; };
+		C445F02C1BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C445F02B1BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.m */; };
+		C445F0371BA3B1AA00C012EF /* ToDoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C445F0361BA3B1AA00C012EF /* ToDoTableViewCell.m */; };
+		C445F0401BA3B92F00C012EF /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C445F03F1BA3B92F00C012EF /* ToDoItem.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C445F0261BA3B12E00C012EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C445F0011BA3B12E00C012EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C445F0081BA3B12E00C012EF;
+			remoteInfo = DeprocrastinatorCoreData;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C445F0091BA3B12E00C012EF /* DeprocrastinatorCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeprocrastinatorCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C445F00D1BA3B12E00C012EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C445F00E1BA3B12E00C012EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C445F0101BA3B12E00C012EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C445F0111BA3B12E00C012EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C445F0141BA3B12E00C012EF /* DeprocrastinatorCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeprocrastinatorCoreData.xcdatamodel; sourceTree = "<group>"; };
+		C445F0161BA3B12E00C012EF /* ToDoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoViewController.h; sourceTree = "<group>"; };
+		C445F0171BA3B12E00C012EF /* ToDoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoViewController.m; sourceTree = "<group>"; };
+		C445F01A1BA3B12E00C012EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C445F01C1BA3B12E00C012EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C445F01F1BA3B12E00C012EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C445F0251BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeprocrastinatorCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C445F02A1BA3B12E00C012EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C445F02B1BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeprocrastinatorCoreDataTests.m; sourceTree = "<group>"; };
+		C445F0351BA3B1AA00C012EF /* ToDoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewCell.h; sourceTree = "<group>"; };
+		C445F0361BA3B1AA00C012EF /* ToDoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewCell.m; sourceTree = "<group>"; };
+		C445F03E1BA3B92F00C012EF /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
+		C445F03F1BA3B92F00C012EF /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C445F0061BA3B12E00C012EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C445F0221BA3B12E00C012EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C445F0001BA3B12E00C012EF = {
+			isa = PBXGroup;
+			children = (
+				C445F00B1BA3B12E00C012EF /* DeprocrastinatorCoreData */,
+				C445F0281BA3B12E00C012EF /* DeprocrastinatorCoreDataTests */,
+				C445F00A1BA3B12E00C012EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C445F00A1BA3B12E00C012EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C445F0091BA3B12E00C012EF /* DeprocrastinatorCoreData.app */,
+				C445F0251BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C445F00B1BA3B12E00C012EF /* DeprocrastinatorCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C445F0101BA3B12E00C012EF /* AppDelegate.h */,
+				C445F0111BA3B12E00C012EF /* AppDelegate.m */,
+				C445F0161BA3B12E00C012EF /* ToDoViewController.h */,
+				C445F0171BA3B12E00C012EF /* ToDoViewController.m */,
+				C445F0351BA3B1AA00C012EF /* ToDoTableViewCell.h */,
+				C445F0361BA3B1AA00C012EF /* ToDoTableViewCell.m */,
+				C445F03E1BA3B92F00C012EF /* ToDoItem.h */,
+				C445F03F1BA3B92F00C012EF /* ToDoItem.m */,
+				C445F0191BA3B12E00C012EF /* Main.storyboard */,
+				C445F01C1BA3B12E00C012EF /* Images.xcassets */,
+				C445F01E1BA3B12E00C012EF /* LaunchScreen.xib */,
+				C445F0131BA3B12E00C012EF /* DeprocrastinatorCoreData.xcdatamodeld */,
+				C445F00C1BA3B12E00C012EF /* Supporting Files */,
+			);
+			path = DeprocrastinatorCoreData;
+			sourceTree = "<group>";
+		};
+		C445F00C1BA3B12E00C012EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C445F00D1BA3B12E00C012EF /* Info.plist */,
+				C445F00E1BA3B12E00C012EF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C445F0281BA3B12E00C012EF /* DeprocrastinatorCoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				C445F02B1BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.m */,
+				C445F0291BA3B12E00C012EF /* Supporting Files */,
+			);
+			path = DeprocrastinatorCoreDataTests;
+			sourceTree = "<group>";
+		};
+		C445F0291BA3B12E00C012EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C445F02A1BA3B12E00C012EF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C445F0081BA3B12E00C012EF /* DeprocrastinatorCoreData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C445F02F1BA3B12E00C012EF /* Build configuration list for PBXNativeTarget "DeprocrastinatorCoreData" */;
+			buildPhases = (
+				C445F0051BA3B12E00C012EF /* Sources */,
+				C445F0061BA3B12E00C012EF /* Frameworks */,
+				C445F0071BA3B12E00C012EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeprocrastinatorCoreData;
+			productName = DeprocrastinatorCoreData;
+			productReference = C445F0091BA3B12E00C012EF /* DeprocrastinatorCoreData.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C445F0241BA3B12E00C012EF /* DeprocrastinatorCoreDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C445F0321BA3B12E00C012EF /* Build configuration list for PBXNativeTarget "DeprocrastinatorCoreDataTests" */;
+			buildPhases = (
+				C445F0211BA3B12E00C012EF /* Sources */,
+				C445F0221BA3B12E00C012EF /* Frameworks */,
+				C445F0231BA3B12E00C012EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C445F0271BA3B12E00C012EF /* PBXTargetDependency */,
+			);
+			name = DeprocrastinatorCoreDataTests;
+			productName = DeprocrastinatorCoreDataTests;
+			productReference = C445F0251BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C445F0011BA3B12E00C012EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Rachel Schneebaum";
+				TargetAttributes = {
+					C445F0081BA3B12E00C012EF = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					C445F0241BA3B12E00C012EF = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = C445F0081BA3B12E00C012EF;
+					};
+				};
+			};
+			buildConfigurationList = C445F0041BA3B12E00C012EF /* Build configuration list for PBXProject "DeprocrastinatorCoreData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C445F0001BA3B12E00C012EF;
+			productRefGroup = C445F00A1BA3B12E00C012EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C445F0081BA3B12E00C012EF /* DeprocrastinatorCoreData */,
+				C445F0241BA3B12E00C012EF /* DeprocrastinatorCoreDataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C445F0071BA3B12E00C012EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C445F01B1BA3B12E00C012EF /* Main.storyboard in Resources */,
+				C445F0201BA3B12E00C012EF /* LaunchScreen.xib in Resources */,
+				C445F01D1BA3B12E00C012EF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C445F0231BA3B12E00C012EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C445F0051BA3B12E00C012EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C445F0401BA3B92F00C012EF /* ToDoItem.m in Sources */,
+				C445F0371BA3B1AA00C012EF /* ToDoTableViewCell.m in Sources */,
+				C445F0151BA3B12E00C012EF /* DeprocrastinatorCoreData.xcdatamodeld in Sources */,
+				C445F0121BA3B12E00C012EF /* AppDelegate.m in Sources */,
+				C445F0181BA3B12E00C012EF /* ToDoViewController.m in Sources */,
+				C445F00F1BA3B12E00C012EF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C445F0211BA3B12E00C012EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C445F02C1BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C445F0271BA3B12E00C012EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C445F0081BA3B12E00C012EF /* DeprocrastinatorCoreData */;
+			targetProxy = C445F0261BA3B12E00C012EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C445F0191BA3B12E00C012EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C445F01A1BA3B12E00C012EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C445F01E1BA3B12E00C012EF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C445F01F1BA3B12E00C012EF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C445F02D1BA3B12E00C012EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C445F02E1BA3B12E00C012EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C445F0301BA3B12E00C012EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DeprocrastinatorCoreData/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C445F0311BA3B12E00C012EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DeprocrastinatorCoreData/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C445F0331BA3B12E00C012EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DeprocrastinatorCoreDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeprocrastinatorCoreData.app/DeprocrastinatorCoreData";
+			};
+			name = Debug;
+		};
+		C445F0341BA3B12E00C012EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DeprocrastinatorCoreDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeprocrastinatorCoreData.app/DeprocrastinatorCoreData";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C445F0041BA3B12E00C012EF /* Build configuration list for PBXProject "DeprocrastinatorCoreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C445F02D1BA3B12E00C012EF /* Debug */,
+				C445F02E1BA3B12E00C012EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C445F02F1BA3B12E00C012EF /* Build configuration list for PBXNativeTarget "DeprocrastinatorCoreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C445F0301BA3B12E00C012EF /* Debug */,
+				C445F0311BA3B12E00C012EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C445F0321BA3B12E00C012EF /* Build configuration list for PBXNativeTarget "DeprocrastinatorCoreDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C445F0331BA3B12E00C012EF /* Debug */,
+				C445F0341BA3B12E00C012EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C445F0131BA3B12E00C012EF /* DeprocrastinatorCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C445F0141BA3B12E00C012EF /* DeprocrastinatorCoreData.xcdatamodel */,
+			);
+			currentVersion = C445F0141BA3B12E00C012EF /* DeprocrastinatorCoreData.xcdatamodel */;
+			path = DeprocrastinatorCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C445F0011BA3B12E00C012EF /* Project object */;
+}
