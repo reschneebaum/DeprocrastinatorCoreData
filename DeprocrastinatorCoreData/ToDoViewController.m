@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *toDoItemsTableView;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
-@property (nonatomic)  NSArray *items;
+@property (nonatomic) NSArray *items;
 @property NSManagedObjectContext *moc;
 
 @end
@@ -88,9 +88,10 @@
         } else {
             [item setPriority:0];
         }
+        [self.moc save:nil];
+        [self loadToDoItems];
         NSLog(@"%@", item.priority);
     }
-    //    [self.toDoItemsTableView reloadData];
 }
 
 #pragma mark - UIGestureRecognizerDelegate
@@ -124,6 +125,16 @@
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+
+    if ([item.priority isEqual:@1]) {
+        cell.contentView.backgroundColor = [UIColor greenColor];
+    } else if ([item.priority isEqual:@2]) {
+        cell.contentView.backgroundColor = [UIColor yellowColor];
+    } else if ([item.priority isEqual:@3]) {
+        cell.contentView.backgroundColor = [UIColor redColor];
+    } else {
+        cell.contentView.backgroundColor = [UIColor whiteColor];
     }
 }
 
@@ -198,7 +209,11 @@
     newItem.title = self.addItemTextField.text;
     newItem.priority = 0;
     newItem.isChecked = 0;
-    newItem.displayOrder = [NSNumber numberWithInt:(int)self.items.count + 1];
+    if (self.items.count <= 0) {
+        newItem.displayOrder = [NSNumber numberWithInteger:1];
+    } else {
+        newItem.displayOrder = [NSNumber numberWithInteger:self.items.count + 1];
+    }
     [self.moc save:nil];
     NSLog(@"new item display order: %@", newItem.displayOrder);
     [self loadToDoItems];
