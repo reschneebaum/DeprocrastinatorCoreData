@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *toDoItemsTableView;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
-@property NSArray *items;
+@property (nonatomic)  NSArray *items;
 @property NSManagedObjectContext *moc;
 
 @end
@@ -29,7 +29,6 @@
 
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     self.moc = delegate.managedObjectContext;
-//    self.items = [NSArray new];
     self.addButton.enabled = false;
 
     //Add a right swipe gesture recognizer
@@ -44,8 +43,14 @@
 }
 
 -(void)loadToDoItems {
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"ToDoItem"];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([ToDoItem class])];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"displayOrder" ascending:true]];
     self.items = [self.moc executeFetchRequest:request error:nil];
+    [self.toDoItemsTableView reloadData];
+}
+
+-(void)setItems:(NSMutableArray *)items {
+    _items = items;
     [self.toDoItemsTableView reloadData];
 }
 
@@ -54,10 +59,12 @@
         NSInteger numberOfItems = 30;
         for (NSInteger i = 1; i <= numberOfItems; i++) {
             NSString *title = [NSString stringWithFormat:@"Thing #%ld", (long)i];
-            ToDoItem *item = [NSEntityDescription insertNewObjectForEntityForName:@"ToDoItem" inManagedObjectContext:self.moc];
+            ToDoItem *item = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([ToDoItem class]) inManagedObjectContext:self.moc];
             item.title = title;
             item.priority = 0;
             item.isChecked = [NSNumber numberWithBool:NO];
+            item.displayOrder = [NSNumber numberWithInteger:i];
+            NSLog(@"item displayOrder: %@", item.displayOrder);
             [self.moc save:nil];
             [self loadToDoItems];
         }
@@ -139,6 +146,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ToDoItem *item = self.items[indexPath.row];
+    NSLog(@"display order of selected cell: %@", item.displayOrder);
     NSLog(@"when selected, is cell checked: %@", item.isChecked);
     if ([item.isChecked isEqual:@1]) {
         [item setValue:@0 forKey:@"isChecked"];
@@ -163,16 +171,21 @@
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
     ToDoItem *toDoItem = [self.items objectAtIndex:sourceIndexPath.row];
     [tableView beginUpdates];
-
+    //  change order of self.items array
     id tmp = [self.items mutableCopy];
     [tmp removeObjectAtIndex:sourceIndexPath.row];
     [tmp insertObject:toDoItem atIndex:destinationIndexPath.row];
     self.items = [tmp copy];
 
+    //  delete and reinsert moved row in tableview
     [tableView deleteRowsAtIndexPaths:@[sourceIndexPath] withRowAnimation:UITableViewRowAnimationNone];
     [tableView insertRowsAtIndexPaths:@[destinationIndexPath] withRowAnimation:UITableViewRowAnimationNone];
     [tableView endUpdates];
 
+    //  change display order of all items in array to reflect adjustments
+    for (ToDoItem *item in self.items) {
+        [item setValue:[NSNumber numberWithInteger:[self.items indexOfObject:item]] forKey:@"displayOrder"];
+    }
     [self.moc save:nil];
     [self loadToDoItems];
 }
@@ -181,16 +194,17 @@
 #pragma mark -
 
 - (IBAction)onAddButtonPressed:(UIButton *)sender {
-    ToDoItem *newItem = [NSEntityDescription insertNewObjectForEntityForName:@"ToDoItem" inManagedObjectContext:self.moc];
+    ToDoItem *newItem = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([ToDoItem class]) inManagedObjectContext:self.moc];
     newItem.title = self.addItemTextField.text;
     newItem.priority = 0;
     newItem.isChecked = 0;
+    newItem.displayOrder = [NSNumber numberWithInt:(int)self.items.count + 1];
     [self.moc save:nil];
+    NSLog(@"new item display order: %@", newItem.displayOrder);
     [self loadToDoItems];
     [self.addItemTextField endEditing:YES];
     [self.addItemTextField resignFirstResponder];
     self.addItemTextField.text = @"";
-//    [self.toDoItemsTableView reloadData];
     self.addButton.enabled = false;
 }
 
