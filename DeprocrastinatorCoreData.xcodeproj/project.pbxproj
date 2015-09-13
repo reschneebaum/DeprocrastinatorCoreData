@@ -15,7 +15,6 @@
 		C445F01D1BA3B12E00C012EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C445F01C1BA3B12E00C012EF /* Images.xcassets */; };
 		C445F0201BA3B12E00C012EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C445F01E1BA3B12E00C012EF /* LaunchScreen.xib */; };
 		C445F02C1BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C445F02B1BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.m */; };
-		C445F0371BA3B1AA00C012EF /* ToDoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C445F0361BA3B1AA00C012EF /* ToDoTableViewCell.m */; };
 		C445F0401BA3B92F00C012EF /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C445F03F1BA3B92F00C012EF /* ToDoItem.m */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +43,6 @@
 		C445F0251BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeprocrastinatorCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C445F02A1BA3B12E00C012EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C445F02B1BA3B12E00C012EF /* DeprocrastinatorCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeprocrastinatorCoreDataTests.m; sourceTree = "<group>"; };
-		C445F0351BA3B1AA00C012EF /* ToDoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewCell.h; sourceTree = "<group>"; };
-		C445F0361BA3B1AA00C012EF /* ToDoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewCell.m; sourceTree = "<group>"; };
 		C445F03E1BA3B92F00C012EF /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
 		C445F03F1BA3B92F00C012EF /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,8 +90,6 @@
 				C445F0111BA3B12E00C012EF /* AppDelegate.m */,
 				C445F0161BA3B12E00C012EF /* ToDoViewController.h */,
 				C445F0171BA3B12E00C012EF /* ToDoViewController.m */,
-				C445F0351BA3B1AA00C012EF /* ToDoTableViewCell.h */,
-				C445F0361BA3B1AA00C012EF /* ToDoTableViewCell.m */,
 				C445F03E1BA3B92F00C012EF /* ToDoItem.h */,
 				C445F03F1BA3B92F00C012EF /* ToDoItem.m */,
 				C445F0191BA3B12E00C012EF /* Main.storyboard */,
@@ -233,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C445F0401BA3B92F00C012EF /* ToDoItem.m in Sources */,
-				C445F0371BA3B1AA00C012EF /* ToDoTableViewCell.m in Sources */,
 				C445F0151BA3B12E00C012EF /* DeprocrastinatorCoreData.xcdatamodeld in Sources */,
 				C445F0121BA3B12E00C012EF /* AppDelegate.m in Sources */,
 				C445F0181BA3B12E00C012EF /* ToDoViewController.m in Sources */,

@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ToDoViewController.h"
-#import "ToDoTableViewCell.h"
 #import "ToDoItem.h"
 #import "AppDelegate.h"
 
@@ -63,6 +62,28 @@
             [self loadToDoItems];
         }
     }
+}
+
+- (void)handleSwipeRight:(UISwipeGestureRecognizer *)gestureRecognizer {
+    //Get location of the swipe
+    CGPoint location = [gestureRecognizer locationInView:self.toDoItemsTableView];
+
+    //Get the corresponding index path within the table view
+    NSIndexPath *indexPath = [self.toDoItemsTableView indexPathForRowAtPoint:location];
+
+    if (indexPath) {
+        ToDoItem *item = self.items[indexPath.row];
+        int temp = [item.priority intValue];
+        if (temp < 3) {
+            temp++;
+            [item setPriority:[NSNumber numberWithInt:temp]];
+            NSLog(@"priority after setter: %@", item.priority);
+        } else {
+            [item setPriority:0];
+        }
+        NSLog(@"%@", item.priority);
+    }
+    //    [self.toDoItemsTableView reloadData];
 }
 
 #pragma mark - UIGestureRecognizerDelegate
