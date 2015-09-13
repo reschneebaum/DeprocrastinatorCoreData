@@ -128,13 +128,13 @@
     }
 
     if ([item.priority isEqual:@1]) {
-        cell.contentView.backgroundColor = [UIColor greenColor];
+        cell.backgroundColor = [UIColor greenColor];
     } else if ([item.priority isEqual:@2]) {
-        cell.contentView.backgroundColor = [UIColor yellowColor];
+        cell.backgroundColor = [UIColor yellowColor];
     } else if ([item.priority isEqual:@3]) {
-        cell.contentView.backgroundColor = [UIColor redColor];
+        cell.backgroundColor = [UIColor redColor];
     } else {
-        cell.contentView.backgroundColor = [UIColor whiteColor];
+        cell.backgroundColor = [UIColor whiteColor];
     }
 }
 

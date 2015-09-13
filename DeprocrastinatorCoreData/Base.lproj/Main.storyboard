@@ -33,13 +33,13 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="bSi-of-3pD"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-pj-LCj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Thing" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-pj-LCj">
                                 <rect key="frame" x="16" y="64" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="y1F-84-5jO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="onAddButtonTextFieldEdited:" destination="vXZ-lx-hvc" eventType="editingChanged" id="5qV-IV-B5Z"/>
                                 </connections>
@@ -50,7 +50,9 @@
                                     <constraint firstAttribute="width" constant="30" id="CVb-yf-iCx"/>
                                     <constraint firstAttribute="height" constant="30" id="ute-yO-H6K"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                 <state key="normal" title="Add">
+                                    <color key="titleColor" red="0.38442769599999999" green="0.52652718139999999" blue="0.73882160949999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -94,9 +96,17 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ixe-oD-nds" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gAl-1G-947">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" alpha="0.49999999999999961" contentMode="scaleToFill" id="gAl-1G-947">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.64655233479999996" green="0.77959106099999997" blue="0.91246704170000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.38442769599999999" green="0.52652718139999999" blue="0.73882160949999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
