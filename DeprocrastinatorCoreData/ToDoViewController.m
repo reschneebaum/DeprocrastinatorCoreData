@@ -114,6 +114,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ToDoCell"];
     ToDoItem *item = self.items[indexPath.row];
     cell.textLabel.text = item.title;
+    cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:15];
 
     return cell;
 }
@@ -128,11 +129,11 @@
     }
 
     if ([item.priority isEqual:@1]) {
-        cell.backgroundColor = [UIColor greenColor];
+        cell.backgroundColor = [UIColor colorWithRed:90.0/255 green:185.0/255 blue:130.0/255 alpha:0.4];
     } else if ([item.priority isEqual:@2]) {
-        cell.backgroundColor = [UIColor yellowColor];
+        cell.backgroundColor = [UIColor colorWithRed:222.0/255 green:180.0/255 blue:82.0/255 alpha:0.4];
     } else if ([item.priority isEqual:@3]) {
-        cell.backgroundColor = [UIColor redColor];
+        cell.backgroundColor = [UIColor colorWithRed:200.0/255 green:50.0/255 blue:50.0/255 alpha:0.4];
     } else {
         cell.backgroundColor = [UIColor whiteColor];
     }

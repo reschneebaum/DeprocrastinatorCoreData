@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Do All the Things!-->
+        <!--DO ALL THE THINGS!!!-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ToDoViewController" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="R8l-mE-z2R">
-                                <rect key="frame" x="0.0" y="30" width="320" height="538"/>
+                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoCell" id="HhW-uW-b90">
@@ -26,6 +26,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HhW-uW-b90" id="hZw-qL-N1n">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -33,8 +34,15 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="bSi-of-3pD"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Thing" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-pj-LCj">
-                                <rect key="frame" x="16" y="64" width="250" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGm-vU-yfJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="gLC-Ok-7Pc"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Another Thing I'll Definitely Do" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-pj-LCj">
+                                <rect key="frame" x="16" y="72" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="y1F-84-5jO"/>
                                 </constraints>
@@ -45,7 +53,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysm-Y4-Npg">
-                                <rect key="frame" x="274" y="64" width="30" height="30"/>
+                                <rect key="frame" x="274" y="72" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="CVb-yf-iCx"/>
                                     <constraint firstAttribute="height" constant="30" id="ute-yO-H6K"/>
@@ -65,15 +73,18 @@
                             <constraint firstItem="SeW-pj-LCj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="8XU-Ob-Gmt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="R8l-mE-z2R" secondAttribute="trailing" constant="-16" id="OOe-Kv-Row"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="R8l-mE-z2R" secondAttribute="bottom" id="Z6K-qL-MOQ"/>
-                            <constraint firstItem="Ysm-Y4-Npg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ZQ8-w5-2i7"/>
+                            <constraint firstItem="Ysm-Y4-Npg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="ZQ8-w5-2i7"/>
                             <constraint firstItem="Ysm-Y4-Npg" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ZvM-2o-gnu"/>
-                            <constraint firstItem="SeW-pj-LCj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="nTn-P6-yMF"/>
+                            <constraint firstItem="OGm-vU-yfJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="bTc-q6-P2u"/>
+                            <constraint firstItem="OGm-vU-yfJ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="f2s-qk-sT4"/>
+                            <constraint firstItem="SeW-pj-LCj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="nTn-P6-yMF"/>
                             <constraint firstItem="R8l-mE-z2R" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="oTt-BZ-733"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OGm-vU-yfJ" secondAttribute="trailing" constant="-16" id="qJW-au-POy"/>
                             <constraint firstItem="Ysm-Y4-Npg" firstAttribute="leading" secondItem="SeW-pj-LCj" secondAttribute="trailing" constant="8" id="qtX-KK-4xY"/>
-                            <constraint firstItem="R8l-mE-z2R" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="30" id="tkc-Ip-cHy"/>
+                            <constraint firstItem="R8l-mE-z2R" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="56" id="tkc-Ip-cHy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Do All the Things!" id="ujL-Tk-h5b">
+                    <navigationItem key="navigationItem" title="DO ALL THE THINGS!!!" id="ujL-Tk-h5b">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="ZnQ-WJ-SwZ">
                             <connections>
                                 <action selector="onEditButtonPressed:" destination="vXZ-lx-hvc" id="4bO-Ic-Ujl"/>
@@ -104,7 +115,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.38442769599999999" green="0.52652718139999999" blue="0.73882160949999998" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
