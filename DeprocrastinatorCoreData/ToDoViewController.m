@@ -39,7 +39,7 @@
     [self.toDoItemsTableView addGestureRecognizer:recognizer];
 
     [self loadToDoItems];
-    [self populateListIfEmpty];
+//    [self populateListIfEmpty];
 }
 
 -(void)loadToDoItems {
