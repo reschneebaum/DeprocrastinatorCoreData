@@ -55,6 +55,7 @@
 }
 
 -(void)populateListIfEmpty {
+    //  fills list for testing purposes
     if (self.items.count <= 0) {
         NSInteger numberOfItems = 30;
         for (NSInteger i = 1; i <= numberOfItems; i++) {
@@ -64,7 +65,6 @@
             item.priority = 0;
             item.isChecked = [NSNumber numberWithBool:NO];
             item.displayOrder = [NSNumber numberWithInteger:i];
-            NSLog(@"item displayOrder: %@", item.displayOrder);
             [self.moc save:nil];
             [self loadToDoItems];
         }
@@ -84,13 +84,11 @@
         if (temp < 3) {
             temp++;
             [item setPriority:[NSNumber numberWithInt:temp]];
-            NSLog(@"priority after setter: %@", item.priority);
         } else {
             [item setPriority:0];
         }
         [self.moc save:nil];
         [self loadToDoItems];
-        NSLog(@"%@", item.priority);
     }
 }
 
@@ -98,6 +96,7 @@
 #pragma mark -
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    //  allow right swipe/swipe to delete/scroll to work at the same time
     return YES;
 }
 
@@ -105,12 +104,10 @@
 #pragma mark -
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"# items in numberofrowsinsection: %lu", (unsigned long)self.items.count);
     return self.items.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ToDoCell"];
     ToDoItem *item = self.items[indexPath.row];
     cell.textLabel.text = item.title;
@@ -121,13 +118,13 @@
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     ToDoItem *item = self.items[indexPath.row];
-
+    //  adds or removes checkmark 9when row is tapped0
     if ([item.isChecked isEqual:@1]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
-
+    //  sets background color based on priority (on right swipe)
     if ([item.priority isEqual:@1]) {
         cell.backgroundColor = [UIColor colorWithRed:90.0/255 green:185.0/255 blue:130.0/255 alpha:0.4];
     } else if ([item.priority isEqual:@2]) {
@@ -141,14 +138,14 @@
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //  delete item from store
         [self.moc deleteObject:self.items[indexPath.row]];
 
+        //  update tableview by removing item from array
         [tableView beginUpdates];
-
         id tmp = [self.items mutableCopy];
         [tmp removeObjectAtIndex:indexPath.row];
         self.items = [tmp copy];
-
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
         [tableView endUpdates];
 
@@ -158,8 +155,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ToDoItem *item = self.items[indexPath.row];
-    NSLog(@"display order of selected cell: %@", item.displayOrder);
-    NSLog(@"when selected, is cell checked: %@", item.isChecked);
+    //  when row is selected, set value of "isChecked"
     if ([item.isChecked isEqual:@1]) {
         [item setValue:@0 forKey:@"isChecked"];
         [self.moc save:nil];
@@ -182,8 +178,8 @@
 
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
     ToDoItem *toDoItem = [self.items objectAtIndex:sourceIndexPath.row];
-    [tableView beginUpdates];
     //  change order of self.items array
+    [tableView beginUpdates];
     id tmp = [self.items mutableCopy];
     [tmp removeObjectAtIndex:sourceIndexPath.row];
     [tmp insertObject:toDoItem atIndex:destinationIndexPath.row];
@@ -210,13 +206,14 @@
     newItem.title = self.addItemTextField.text;
     newItem.priority = 0;
     newItem.isChecked = 0;
+
+    //  if no items exist, new item gets display order 1; otherwise, item's display order is equal to the number of existing items+1 (added to end)
     if (self.items.count <= 0) {
         newItem.displayOrder = [NSNumber numberWithInteger:1];
     } else {
         newItem.displayOrder = [NSNumber numberWithInteger:self.items.count + 1];
     }
     [self.moc save:nil];
-    NSLog(@"new item display order: %@", newItem.displayOrder);
     [self loadToDoItems];
     [self.addItemTextField endEditing:YES];
     [self.addItemTextField resignFirstResponder];
