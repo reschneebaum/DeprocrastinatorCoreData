@@ -72,12 +72,13 @@
 }
 
 - (void)handleSwipeRight:(UISwipeGestureRecognizer *)gestureRecognizer {
-    //Get location of the swipe
+    //  Get location of the swipe
     CGPoint location = [gestureRecognizer locationInView:self.toDoItemsTableView];
 
-    //Get the corresponding index path within the table view
+    //  Get the corresponding index path within the table view
     NSIndexPath *indexPath = [self.toDoItemsTableView indexPathForRowAtPoint:location];
 
+    //  reassign item priority with each swipe
     if (indexPath) {
         ToDoItem *item = self.items[indexPath.row];
         int temp = [item.priority intValue];
@@ -118,7 +119,7 @@
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     ToDoItem *item = self.items[indexPath.row];
-    //  adds or removes checkmark 9when row is tapped0
+    //  adds or removes checkmark (when row is tapped)
     if ([item.isChecked isEqual:@1]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
